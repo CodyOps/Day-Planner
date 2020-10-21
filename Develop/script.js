@@ -1,5 +1,6 @@
 //VARIABLE DECLARTION
 var currentDate = document.getElementById("currentDay");
+var timeSlots = document.getElementsByClassName("container");
 
 //FETCH API
 function getApi() {
@@ -16,6 +17,6 @@ function getApi() {
       currentDate.appendChild(timeAndDate);
     });
 }
-
 getApi();
-console.log(getApi);
+
+//CREATING TIMESLOTS
