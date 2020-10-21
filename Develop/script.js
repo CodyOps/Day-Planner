@@ -29,3 +29,8 @@ function createTimeSlots(data) {
     timeSlots.appendChild(timeList);
   }
 }
+
+//LOCAL STORAGE
+var userEvent = timeSlots.value.trim();
+
+localStorage.setItem("userEvent", JSON.stringify(userEvent));
