@@ -25,7 +25,7 @@ getApi();
 function createTimeSlots(data) {
   for (var i = 0; i < time.length; i++) {
     var timeList = document.createElement("div");
-    timeList.textContent = data[i];
+    timeList.textArea = data[i];
     timeSlots.appendChild(timeList);
   }
 }
