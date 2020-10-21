@@ -2,6 +2,10 @@
 var currentDate = document.getElementById("currentDay");
 var timeSlots = document.getElementsByClassName("container");
 
+var time = [
+    "9AM","10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"
+]
+
 //FETCH API
 function getApi() {
   // Insert the API url to get a list of your repos
@@ -20,3 +24,7 @@ function getApi() {
 getApi();
 
 //CREATING TIMESLOTS
+function createTimeSlots(){
+
+    for (var i = 0)
+}
