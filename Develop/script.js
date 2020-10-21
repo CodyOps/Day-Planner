@@ -2,9 +2,7 @@
 var currentDate = document.getElementById("currentDay");
 var timeSlots = document.getElementsByClassName("container");
 
-var time = [
-    "9AM","10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"
-]
+var time = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
 
 //FETCH API
 function getApi() {
@@ -24,7 +22,10 @@ function getApi() {
 getApi();
 
 //CREATING TIMESLOTS
-function createTimeSlots(){
-
-    for (var i = 0)
+function createTimeSlots(data) {
+  for (var i = 0; i < time.length; i++) {
+    var timeList = document.createElement("div");
+    timeList.textContent = data[i];
+    timeSlots.appendChild(timeList);
+  }
 }
