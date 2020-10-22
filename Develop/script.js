@@ -1,6 +1,6 @@
 //VARIABLE DECLARTION
 var currentDate = document.getElementById("currentDay");
-var timeSlots = document.getElementsByClassName("container");
+var timeSlots = document.getElementById("containerId");
 
 var time = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
 
@@ -22,15 +22,16 @@ function getApi() {
 getApi();
 
 //CREATING TIMESLOTS
-function createTimeSlots(data) {
+function createTimeSlots() {
   for (var i = 0; i < time.length; i++) {
     var timeList = document.createElement("div");
-    timeList.textArea = data[i];
+    timeList.textContent = time[i];
     timeSlots.appendChild(timeList);
   }
 }
 
+createTimeSlots();
 //LOCAL STORAGE
-var userEvent = timeSlots.value.trim();
+// var userEvent = timeSlots.value.trim();
 
-localStorage.setItem("userEvent", JSON.stringify(userEvent));
+// localStorage.setItem("userEvent", JSON.stringify(userEvent));
