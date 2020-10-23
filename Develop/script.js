@@ -14,7 +14,7 @@ function getApi() {
       return response.json();
     })
     .then(function (data) {
-      var timeAndDate = document.createElement("p");
+      var timeAndDate = document.createElement("h3");
       timeAndDate.textContent = data[0].html_url;
       currentDate.appendChild(timeAndDate);
     });
