@@ -24,7 +24,7 @@ function createTimeSlots() {
 }
 
 //EVENTS
-$(".btn").on("click", function () {
+$(".saveBtn").on("click", function () {
   console.log($(this).siblings(".text").val());
   console.log($(this).parent().attr("id"));
 });
