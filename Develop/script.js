@@ -38,7 +38,7 @@ $(".saveBtn").on("click", function () {
     var saveTime = localStorage.getItem(".time");
   }
 
-  localStorage.setItem(".textContent", saveText);
+  localStorage.setItem(".time", eventText);
   $(".textContent").text = saveText;
 });
 //key and value to local storage
