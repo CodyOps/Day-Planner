@@ -26,28 +26,20 @@ function createTimeSlots() {
 
 //EVENTS
 $(".saveBtn").on("click", function () {
-  //   console.log($(this).siblings(".text").val());
-  //   console.log($(this).parent().attr("id"));
-  var eventText = document.querySelector(".text").value;
-  var eventTime = document.querySelector(".time").value;
+  console.log($(this).siblings(".text").val());
+  console.log($(this).parent().attr("id"));
+
+  var eventText = $(this).siblings(".text").val();
+  var eventTime = $(this).parent().attr("id");
 
   if (eventText === "") {
     alert("Event text cannot be blank");
   } else {
     alert("Event Saved");
-    var saveText = localStorage.getItem(".text");
-    var saveTime = localStorage.getItem(".time");
   }
-
+  console.log(eventTime, eventText);
   localStorage.setItem(eventTime, eventText);
-  $(".textContent").text = saveText;
 });
-//key and value to local storage
-
-// function saveEvent() {
-//   var saveText = localStorage.getItem(".text");
-//   var saveTime = localStorage.getItem(".time");
-// }
 
 //ENTRY POINT
 // createTimeSlots();
