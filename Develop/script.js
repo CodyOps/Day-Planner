@@ -28,8 +28,11 @@ function createTimeSlots() {
 
 //EVENTS
 $(document).ready(function () {
-  $(".text").text = localStorage.getItem(eventTime, eventText);
-  //after the document is loaded, check local storage for any saved key value pairs and load it into the textArea for the user
+  var textSpace = localStorage.getItem(key, value);
+  //creates a variable to go to local storage and grab the key and valuue
+  $(".text").text = localStorage.getItem(textSpace);
+  //after the document is loaded, check local storage for any saved key value pairs and load it into the textArea for the user to see
+
   $(".saveBtn").on("click", function () {
     //run the function after the user clicks a save button
     console.log($(this).siblings(".text").val());
