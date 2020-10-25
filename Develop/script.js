@@ -39,6 +39,8 @@ $(".saveBtn").on("click", function () {
   }
   console.log(eventTime, eventText);
   localStorage.setItem(eventTime, eventText);
+
+  $(this).siblings(".text").text = localStorage.getItem(eventText);
 });
 
 //ENTRY POINT
