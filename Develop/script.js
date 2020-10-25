@@ -25,10 +25,21 @@ function createTimeSlots() {
 
 //EVENTS
 $(".saveBtn").on("click", function () {
-  console.log($(this).siblings(".text").val());
-  console.log($(this).parent().attr("id"));
+  //   console.log($(this).siblings(".text").val());
+  //   console.log($(this).parent().attr("id"));
+  var eventText = document.querySelector(".text");
+
+  if (eventText === "") {
+    displayMessage("Event text cannot be blank");
+  } else {
+    displayMessage("Event Saved");
+  }
 });
 //key and value to local storage
+
+function saveEvent() {
+  var saveText = localStorage.getItem;
+}
 
 //ENTRY POINT
 // createTimeSlots();
