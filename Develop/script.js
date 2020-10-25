@@ -29,6 +29,7 @@ $(".saveBtn").on("click", function () {
   //   console.log($(this).siblings(".text").val());
   //   console.log($(this).parent().attr("id"));
   var eventText = document.querySelector(".text").value;
+  var eventTime = document.querySelector(".time").value;
 
   if (eventText === "") {
     alert("Event text cannot be blank");
@@ -38,7 +39,7 @@ $(".saveBtn").on("click", function () {
     var saveTime = localStorage.getItem(".time");
   }
 
-  localStorage.setItem(".time", eventText);
+  localStorage.setItem(eventTime, eventText);
   $(".textContent").text = saveText;
 });
 //key and value to local storage
