@@ -38,9 +38,11 @@ $(".saveBtn").on("click", function () {
 //key and value to local storage
 
 function saveEvent() {
-  var saveText = localStorage.getItem;
+  var saveText = localStorage.getItem(".text");
+  var saveTime = localStorage.getItem(".time");
 }
 
 //ENTRY POINT
 // createTimeSlots();
 // getApi();
+saveEvent();
