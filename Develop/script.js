@@ -1,6 +1,7 @@
 //VARIABLE DECLARTION
 var currentDate = document.getElementById("currentDay");
 var timeSlots = document.getElementById("containerId");
+var saveButton = document.getElementsByClassName(".saveBtn");
 
 var time = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
 
@@ -33,16 +34,20 @@ $(".saveBtn").on("click", function () {
     alert("Event text cannot be blank");
   } else {
     alert("Event Saved");
+    var saveText = localStorage.getItem(".text");
+    var saveTime = localStorage.getItem(".time");
   }
+
+  $(".textContent").text = saveText;
 });
 //key and value to local storage
 
-function saveEvent() {
-  var saveText = localStorage.getItem(".text");
-  var saveTime = localStorage.getItem(".time");
-}
+// function saveEvent() {
+//   var saveText = localStorage.getItem(".text");
+//   var saveTime = localStorage.getItem(".time");
+// }
 
 //ENTRY POINT
 // createTimeSlots();
 // getApi();
-saveEvent();
+// saveEvent();
