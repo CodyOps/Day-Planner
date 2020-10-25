@@ -6,8 +6,6 @@ var saveButton = document.getElementsByClassName(".saveBtn");
 //Array for all time slots during regular business hours
 var time = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
 
-//FETCH API
-
 //Creates the current time and date pulled from moment.js
 var date = document.createElement("h3");
 var time = document.createElement("p");
@@ -16,17 +14,8 @@ time.textContent = moment().hours() + ":" + moment().minute();
 
 currentDate.append(date, time);
 
-//CREATING TIMESLOTS
-function createTimeSlots() {
-  for (var i = 0; i < time.length; i++) {
-    var timeList = document.createElement("div");
-
-    timeList.textContent = time[i];
-    timeSlots.appendChild(timeList);
-  }
-}
-
 //EVENTS
+
 $(document).ready(function () {
   //creates a variable to go to local storage and grab the key and value
   $(".text").text(JSON.parse(localStorage.getItem("eventText")));
