@@ -9,7 +9,7 @@ var time = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
 var date = document.createElement("h3");
 var time = document.createElement("p");
 date.textContent = moment().format("dddd, MMMM Do YYYY");
-time.textContent = moment().hours();
+time.textContent = moment().hours() + ":" + moment().minute();
 
 currentDate.append(date, time);
 
