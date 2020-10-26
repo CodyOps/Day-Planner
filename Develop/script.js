@@ -18,30 +18,34 @@ currentDate.append(date, time);
 
 $(document).ready(function () {
   //creates a variable to go to local storage and grab the key and value
-  //   var myCoolObject = {
-  //     events: [
-  //       {
-  //         event: "some event",
-  //       },
-  //       {
-  //         event: "some other event",
-  //       },
-  //     ],
-  //   };
-  //   localStorage.setItem("allEvents", JSON.stringify(myCoolObject));
-  //   var retrievedObject = localStorage.getItem("allEvents");
-  //   console.log(retrievedObject);
-  //   console.log(JSON.parse(retrievedObject));
-
-  for (var i = 0; i < time.length; i++) {
-    if (localStorage.getItem(time[i]) != null) {
-      var timeRow = document.getElementById("text" + time[i]);
-      timeRow.value = localStorage.getItem(hours[i]);
+  // var myCoolObject = {
+  //   events: [
+  //     {
+  //       event: "some event",
+  //     },
+  //     {
+  //       event: "some other event",
+  //     },
+  //   ],
+  // };
+  // localStorage.setItem("allEvents", JSON.stringify(myCoolObject));
+  // var retrievedObject = localStorage.getItem("allEvents");
+  // console.log(retrievedObject);
+  // console.log(JSON.parse(retrievedObject));
+  function saveRow() {
+    for (var i = 0; i < time.length; i++) {
+      if (localStorage.getItem(time[i])) {
+        var retrievedRow = localStorage.getItem("eText");
+        text.value = JSON.parse("eText");
+      }
     }
   }
 
-  $(".text").text = localStorage.getItem("eText");
-  //after the document is loaded, check local storage for any saved key value pairs and load it into the textArea for the user to see
+  if (time < date.value) {
+    textArea.setAttribute = ".past";
+  } else if (time > date.value) {
+    textArea.setAttribute = ".future";
+  }
 
   $(".saveBtn").on("click", function () {
     //run the function after the user clicks a save button
@@ -57,11 +61,14 @@ $(document).ready(function () {
       alert("Event Saved");
     }
     console.log(eventTime, eventText);
-    localStorage.setItem("eText", eventText);
-    localStorage.setItem("eTime", eventTime);
+    localStorage.setItem("eText", JSON.stringify(eventText));
+    localStorage.setItem("eTime", JSON.stringify(eventTime));
   });
+
+  saveRow();
 });
 //ENTRY POINT
+
 // createTimeSlots();
 // getApi();
 // saveEvent();
