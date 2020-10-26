@@ -18,7 +18,29 @@ currentDate.append(date, time);
 
 $(document).ready(function () {
   //creates a variable to go to local storage and grab the key and value
-  $(".text").text(JSON.parse(localStorage.getItem("eventText")));
+  //   var myCoolObject = {
+  //     events: [
+  //       {
+  //         event: "some event",
+  //       },
+  //       {
+  //         event: "some other event",
+  //       },
+  //     ],
+  //   };
+  //   localStorage.setItem("allEvents", JSON.stringify(myCoolObject));
+  //   var retrievedObject = localStorage.getItem("allEvents");
+  //   console.log(retrievedObject);
+  //   console.log(JSON.parse(retrievedObject));
+
+  for (var i = 0; i < time.length; i++) {
+    if (localStorage.getItem(time[i]) != null) {
+      var timeRow = document.getElementById("text" + time[i]);
+      timeRow.value = localStorage.getItem(hours[i]);
+    }
+  }
+
+  $(".text").text = localStorage.getItem("eText");
   //after the document is loaded, check local storage for any saved key value pairs and load it into the textArea for the user to see
 
   $(".saveBtn").on("click", function () {
@@ -35,9 +57,8 @@ $(document).ready(function () {
       alert("Event Saved");
     }
     console.log(eventTime, eventText);
-    localStorage.setItem(eventTime, eventText);
-
-    $(this).siblings(".text").text = localStorage.getItem(eventText);
+    localStorage.setItem("eText", eventText);
+    localStorage.setItem("eTime", eventTime);
   });
 });
 //ENTRY POINT
