@@ -6,4 +6,12 @@ Some key feature of this work day application are that the current day is displa
 
 I hope you enjoy my application!
 
+Link to the application: https://codyops.github.io/Homework-5/
+
 ![Screen Shot 2020-10-25 at 8 55 30 PM](https://user-images.githubusercontent.com/70075378/97129398-74b10b80-1704-11eb-8625-ab08fdd2219e.png)
+
+![Screen Shot 2020-10-25 at 8 58 03 PM](https://user-images.githubusercontent.com/70075378/97129585-db362980-1704-11eb-8486-c8b61b853f63.png)
+
+![Screen Shot 2020-10-25 at 8 58 13 PM](https://user-images.githubusercontent.com/70075378/97129595-e5582800-1704-11eb-8b35-7b63956b7d73.png)
+
+![Screen Shot 2020-10-25 at 8 58 25 PM](https://user-images.githubusercontent.com/70075378/97129604-ec7f3600-1704-11eb-8664-27d07f42bdec.png)
