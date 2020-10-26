@@ -21,18 +21,20 @@ $(document).ready(function () {
   $("#9text").val(localStorage.getItem("9am"));
   $("#10text").val(localStorage.getItem("10am"));
   $("#11text").val(localStorage.getItem("11am"));
-  $("#12text").val(localStorage.getItem("12am"));
+  $("#12text").val(localStorage.getItem("12pm"));
   $("#1text").val(localStorage.getItem("1pm"));
   $("#2text").val(localStorage.getItem("2pm"));
   $("#3text").val(localStorage.getItem("3pm"));
   $("#4text").val(localStorage.getItem("4pm"));
   $("#5text").val(localStorage.getItem("5pm"));
 
-  if (time.textContent < date.value) {
-    textArea.setAttribute = ".past";
-  } else if (time > date.value) {
-    textArea.setAttribute = ".future";
-  }
+  //   if (time.parseInt(textContent) < date.textContent.value) {
+  //     textarea.setAttribute("class", "past");
+  //   } else if (time.parseInt(textContent) > date.value) {
+  //     textarea.setAttribute("hour", "future");
+  //   } else if (time.parseInt(textContent) == date.value) {
+  //     textarea.setAttribute("hour", "present");
+  //   }
 
   $(".saveBtn").on("click", function () {
     //run the function after the user clicks a save button
