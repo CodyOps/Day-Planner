@@ -39,21 +39,19 @@ $(document).ready(function () {
       alert("Event Saved");
     }
     console.log(eventTime, eventText);
-    localStorage.setItem("time", JSON.stringify(eventText));
+    localStorage.setItem(eventTime, eventText);
     // localStorage.setItem("eTime", JSON.stringify(eventTime));
 
-    function saveRow() {
-      for (var i = 0; i < time.length; i++) {
-        if (localStorage.getItem(time[i]) !== null) {
-          localStorage.getItem("time");
-          JSON.parse("eventText");
-        }
-      }
-    }
-    saveRow();
+    $("#9text").val(localStorage.getItem("9am"));
+    $("#10text").val(localStorage.getItem("10am"));
+    $("#11text").val(localStorage.getItem("11am"));
+    $("#12text").val(localStorage.getItem("12am"));
+    $("#1text").val(localStorage.getItem("1pm"));
+    $("#2text").val(localStorage.getItem("2pm"));
+    $("#3text").val(localStorage.getItem("3pm"));
+    $("#4text").val(localStorage.getItem("4pm"));
+    $("#5text").val(localStorage.getItem("5pm"));
   });
-
-  localStorage.getItem("time", JSON.parse(eventText));
 });
 //ENTRY POINT
 
